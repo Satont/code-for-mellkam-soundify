@@ -17,6 +17,8 @@ const createSpotify = (client: Client): F => {
     return clazz as F
 }
 
-const spotify = createSpotify('im client' as Client)
-
-spotify.fetchSongs('321')
+for (let index = 0; index < 50; index++) {
+    const start = performance.now()
+    const spotify = createSpotify('im client' as Client)
+    console.log(performance.now() - start)
+}
